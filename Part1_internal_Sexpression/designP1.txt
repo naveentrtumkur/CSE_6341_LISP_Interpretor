@@ -1,0 +1,23 @@
+#########################################################
+#					Design Document						#
+#########################################################
+
+The important classes used for the implementation:-
+
+(a) Class SExpr{}
+	This is the basic class defining the structure of how an SExpression will be stored internally.
+	A parse tree would be built using this class.
+
+(b) Class Constants{}
+	All the constants used in the program are defined here.
+
+(c) Class LispInterpretor{}
+	This is the main class and it contains main() method. All the input SExpression would be accepted from the user.
+
+(d) Class LispParser{}
+	In this class all the syntax validation happens and SExpression tree would be constructed and stored.
+
+(e) Class StringToken
+	This class creates a input string into multiple String tokens based on the seperators provided.
+	You can get teh String token and set the String Tokens using suitable methods.
+

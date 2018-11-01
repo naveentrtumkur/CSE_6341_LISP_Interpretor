@@ -1,0 +1,110 @@
+################################################################################
+
+After Execution, I got the following outputs.
+I have briefly explained input and output of execution.
+
+TEST_CASE #0:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(AdditionSimple 50)     
+$
+ExceptionError: A Symbolic atom should have 1 to 10 characters only
+
+TEST #0:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(+63726 -827381793)
+$
+ExceptionError: A Numeric atom should have 1 to 6 characters (Excluding a '+' or '-')
+
+
+TEST #1:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+( 2 . (3 4))
+$
+>(2.(3.(4.NIL)))
+
+TEST #2:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+( 2 . (3 4) . 5)
+$
+Error occured
+ExceptionError: Invalid character encountered = .
+
+
+TEST #3:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+( 2 . ((3 4) . 5))
+    
+$
+>(2.((3.(4.NIL)).5))
+
+TEST #4:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+( 2 . (3 4) $ 5)
+$
+Error occured
+ExceptionError: Invalid character encountered = $
+
+TEST #5:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+( 2 (3 . 4) (5 . 6))
+$
+>(2.((3.4).((5.6).NIL)))
+
+
+TEST #6:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(CAR (QUOTE (A . B)))
+$
+>(CAR.((QUOTE.((A.B).NIL)).NIL))
+
+TEST #7:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+ (CONS 4 (QUOTE (A . B)))
+$
+>(CONS.(4.((QUOTE.((A.B).NIL)).NIL)))
+
+
+TEST #8:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(CONS 4 (A . B)
+$
+Number of left and right paranthesis do not match..
+
+
+TEST #9:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(DEFUN SILLY (A B) (PLUS A B))
+$
+>(DEFUN.(SILLY.((A.(B.NIL)).((PLUS.(A.(B.NIL))).NIL))))
+
+TEST #10:
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ java LispInterpretor
+Enter the SExpression followed by a '$' sign
+Press '$$' and hit enter to stop input routine
+(NOTSOSILLY 0 0)
+$$
+>(NOTSOSILLY.(0.(0.NIL)))
+>Bye!
+Naveens-MacBook-Pro:LispInterpretor_project1 naveentr$ 
